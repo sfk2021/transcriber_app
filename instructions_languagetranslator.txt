@@ -1,0 +1,75 @@
+Azure AI Translator App - Instructions
+
+1️.Prerequisites
+
+* Python 3.9+ installed
+* Azure OpenAI resource with:
+
+  * Endpoint (e.g., https://<your-resource>.openai.azure.com/)
+  * Key
+  * Deployment of a model (e.g., gpt-35-turbo or gpt-4)
+* Git (optional)
+
+2️.Clone the repository (if needed)
+
+```
+git clone https://github.com/<your-username>/<your-repo-name>.git
+cd <your-repo-name>
+```
+
+3️.Install Python dependencies
+
+
+pip install -r requirements.txt
+
+
+**Example requirements.txt**:
+
+
+flask
+openai
+
+
+4️.Set environment variables
+
+Windows CMD:
+
+
+set AZURE_ENDPOINT=https://<your-resource>.openai.azure.com/
+set AZURE_KEY=<your-azure-key>
+set DEPLOYMENT=<your-deployment-name>
+
+
+Linux / MacOS / PowerShell:
+
+
+export AZURE_ENDPOINT=https://<your-resource>.openai.azure.com/
+export AZURE_KEY=<your-azure-key>
+export DEPLOYMENT=<your-deployment-name>
+
+
+5️.Run the app
+
+
+python translator.py
+
+
+Open your browser at [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
+
+6️.Using the Translator
+
+* Enter the text to translate
+* Select the target language (e.g., Urdu, French, Spanish)
+* Click Translate
+* See translated text below
+
+7️.Notes / Tips
+
+* Use gpt-35-turbo for faster testing
+* Use gpt-4 for longer or more complex translations
+* If you get Connection error, check endpoint URL, deployment name, key validity, network access
+* You can add more languages in the HTML <select> dropdown
+
+8️.Stop the server
+
+* Press Ctrl + C in terminal
