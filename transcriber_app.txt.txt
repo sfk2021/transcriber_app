@@ -1,0 +1,54 @@
+Azure Speech App
+
+This is a simple Python app for Text-to-Speech (TTS) and Speech-to-Text (STT) using Azure Cognitive Services. It provides a basic web frontend using Flask.
+
+Prerequisites
+
+1. Python 3.10+ installed
+2. An Azure account with Speech Service resource
+3. VS Code or any Python IDE
+
+Setup Instructions
+
+1. Clone the repository
+
+git clone https://github.com/yourusername/your-repo.git
+cd your-repo
+
+2. Create a virtual environment (optional but recommended)
+
+python -m venv venv
+venv\Scripts\activate   (Windows)
+source venv/bin/activate (Linux/Mac)
+
+3. Install dependencies
+
+pip install -r requirements.txt
+
+Dependencies:
+
+azure-cognitiveservices-speech==1.46.0
+pydub==0.25.1
+python-dotenv==1.0.0
+flask==2.3.3
+requests==2.31.0
+
+4. Add your Azure keys
+
+Create a .env file in the project root with the following:
+
+AZURE_SPEECH_KEY=your_azure_speech_key
+AZURE_SPEECH_REGION=your_azure_region
+
+Do NOT commit .env to GitHub. It contains secrets.
+
+5. Run the app
+
+python main.py
+
+The app will start a Flask server (default: http://127.0.0.1:5000)
+Open the URL in your browser to use TTS and STT features
+
+
+
+
